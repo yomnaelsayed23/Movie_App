@@ -1,0 +1,9 @@
+.carousel{
+    width: 100%;
+    margin-bottom: 90px;
+    /* height: 90vh !important; */
+    }
+    .carousel img {
+        height: 80vh!important;
+    }
+    

@@ -1,0 +1,17 @@
+
+<div class="">
+  <div class="row main-div justify-content-center  ">
+
+
+    @for (movie of movies; track movie.id; let i = $index) {
+        <div class="card m-3 movie_card col-sm-12 col-md-4 ">
+
+        <app-moviecard [movie]="movie"></app-moviecard>
+    </div>
+    }@empty {
+      <p>the movie you'are looking for doesn't exist.</p>
+    }
+
+    
+</div>
+</div>

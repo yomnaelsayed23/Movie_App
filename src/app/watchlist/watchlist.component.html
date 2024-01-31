@@ -1,0 +1,18 @@
+
+
+
+<div class=" " >
+    
+        <div *ngIf="moviess.length === 0" class="mt-5  ">
+
+            <i class="fas fa-heart-broken text-danger d-flex  justify-content-center align-content-center  broken"></i>
+            <p class="text-light d-flex  justify-content-center align-content-center">Watch List Is Empty</p>
+          </div></div>
+          <div *ngIf="moviess.length > 0" class="row main-div justify-content-center">
+            <div *ngFor="let movie of moviess; let i = index" class="card movie_card col-sm-12 col-md-4">
+              <app-moviecard [movie]="movie"></app-moviecard>
+          </div>
+          
+       
+    </div>
+

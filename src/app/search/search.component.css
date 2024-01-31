@@ -1,0 +1,10 @@
+.search-container{
+    background-color: #eee;
+    width: 90vw;
+    line-height:3.2rem;
+
+}
+.search .btn{
+    background-color: var(--main-color);
+    color: #fff;
+}

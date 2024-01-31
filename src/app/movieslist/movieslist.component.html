@@ -1,0 +1,29 @@
+<!-- 
+<div class=" search-container  m-auto ">
+    <div class="container search w-70 py-5 m-5">
+        <h3 class="fw-bold">Welcome to our movie app </h3>
+    <p>Millions of movies, TV shows and people to discover. Explore now. </p> 
+        <div class="search-box d-flex gap-4 w-70">
+        <input type="text" [(ngModel)]="searchtext" class="form-control " name="search" placeholder="Search and Explore">
+        <button class="btn"  routerLinkActive="router-link-active" >Search</button>
+        </div>
+    </div>
+    </div>
+     -->
+     <app-header></app-header>
+     <div class="">
+       <div class="row main-div justify-content-center ">
+ 
+ 
+         @for (movie of movies; track movie.id; let i = $index) {
+             <div class="card movie_card col-sm-12 col-md-4">
+ 
+             <app-moviecard [movie]="movie"></app-moviecard>
+         </div>
+         }
+     
+         
+     </div>
+     </div>
+     
+ 

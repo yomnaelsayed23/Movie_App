@@ -1,0 +1,84 @@
+<i (click)="toggleClass()" id="modeButtonIcon"
+	class="fa fa-toggle-on end-0 me-2 position-absolute  btn btn-dark bg-transparent border-0 fa-2x"
+	aria-hidden="true"></i>
+
+<section class="dark" id="dark">
+	<div class="container py-4">
+		<h1 class="h1 text-center" style="color:#e1e5ea" id="pageHeaderTitle">Movie App</h1>
+
+		<article class="postcard dark blue">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" [src]="baseurl + movie.poster_path" alt="Image Title" />
+			</a>
+			<div class="postcard__text">
+				<h1 class="postcard__title blue"><a href="#">{{movie.title}}</a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2 "></i>{{movie.release_date |date}}
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">{{ movie.tagline}}</div>
+				<div class="">{{ movie.overview}}</div>
+
+
+
+				@if(movie.genres[0].name){<ul class="postcard__tagbox mb-3">
+					@if(movie.genres[0].name){<li class="tag__item"><i
+							class="fas fa-tag mr-2"></i>{{movie.genres[0].name}}</li>}
+					@if(movie.genres[1].name){<li class="tag__item"><i
+							class="fas fa-tag mr-2"></i>{{movie.genres[1].name}}</li>}
+					@if(movie.genres[2].name){<li class="tag__item"><i
+							class="fas fa-tag mr-2"></i>{{movie.genres[2].name}}</li>}
+
+
+					<li class="tag__item"><i class="fas fa-clock mr-2"></i>{{ movie.runtime }}mins.</li>
+					<li class="tag__item play blue">
+						<a href="#"><i class="fas fa-play mr-2"></i>Play movie</a>
+					</li>
+				</ul>}
+
+				<ngbd-rating-decimal [rating]="movie.vote_average"></ngbd-rating-decimal>
+				
+
+			</div>
+		</article>
+
+	</div>
+</section>
+
+<section class="light d-none" id="light">
+	<div class="container py-4">
+		<div class="h1 text-center text-dark" id="pageHeaderTitle">site name</div>
+
+		<article class="postcard light blue">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" [src]="baseurl + movie.poster_path" alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
+					fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus
+					nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam
+					adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi,
+					illum quos!</div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+					<li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+					<li class="tag__item play blue">
+						<a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+
+	</div>
+</section>
+
+<app-recommended></app-recommended>
